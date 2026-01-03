@@ -15,6 +15,7 @@
 
 
 ** Detected Literals
+   - Decimal, e.g. =42=, =-17=, =+5=, =007=.
    - Binary, e.g. =0b0101=, =0B0101=.
    - Octal, e.g. =0o755=, =0O700=.
    - Hexadecimal, e.g. =0xDEADBEEF=, =0XCAFE=.
@@ -88,23 +89,27 @@
 
 * Install
 
+** Dependencies
+   This package requires the [[https://melpa.org/#/shift-number][shift-number]] package, which provides the
+   core number manipulation logic.
+
 ** Basic Installation
    Put in =load-path=, =(require 'evil-numbers)= and set key bindings.
 
 ** Use Package
    Assuming you have the =melpa= repository enabled, =use-package= can be used as follows.
+   The =shift-number= dependency will be installed automatically.
 
    #+BEGIN_SRC emacs-lisp
      (use-package evil-numbers)
    #+END_SRC
 
 * Known Bugs
-  See http://github.com/juliapath/evil-numbers/issues
+  See https://github.com/juliapath/evil-numbers/issues
 
 * Similar Packages
   - [[https://melpa.org/#/mouse-slider-mode][Mouse Slider Package]]
   - [[https://melpa.org/#/number][Number Package]]
-  - [[https://melpa.org/#/shift-number][Shift Number Package]]
   - [[https://www.emacswiki.org/emacs/IncrementNumber][Emacs Wiki (Increment Number)]]
 
 * Contributors
