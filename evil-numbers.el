@@ -53,6 +53,7 @@
 
 ;;; Code:
 
+(require 'cl-lib)
 (require 'evil)
 (require 'shift-number)
 
@@ -151,7 +152,7 @@ Numbers with a leading zero are always padded."
                                 (* amount count)
                                 (cons (point) (point-max)))
                   (when incremental
-                    (incf count)))))))
+                    (cl-incf count)))))))
        (save-excursion
          (if (eq type 'block)
              (evil-apply-on-block process-region beg end nil)
